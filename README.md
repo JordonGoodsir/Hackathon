@@ -6,6 +6,6 @@ This project is designed to resolve the main issue that many of us are experienc
 
 ## Authors
 
-Ashley Smith - [github profile](https://github.com/Ash-Eileen)
+Ashley Smith - [GitHub profile](https://github.com/Ash-Eileen)
 
-Jordon Goodsir - [github profile](https://github.com/JordonGoodsir)
+Jordon Goodsir - [GitHub profile](https://github.com/JordonGoodsir)
