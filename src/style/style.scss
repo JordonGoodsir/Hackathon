@@ -1,4 +1,8 @@
-@import "partials/home"; 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
+@import "partials/fonts_colors"; 
+@import "partials/home";   
+
 
 * { 
     padding: 0; 
@@ -6,3 +10,8 @@
     box-sizing: border-box; 
     z-index: 1;
 } 
+
+.body { 
+    font-family: $body_font;
+}
+
