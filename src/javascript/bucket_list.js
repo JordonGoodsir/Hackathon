@@ -1,4 +1,4 @@
-"https://www.boredapi.com/api/activity/"
+
 
 
 let fetchBucketList = async () => {   
