@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap");
+@-webkit-keyframes shake {
+  10% {
+    -webkit-transform: translate(0px, -5px) rotate(-5deg);
+            transform: translate(0px, -5px) rotate(-5deg);
+  }
+  15% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  30% {
+    -webkit-transform: translate(5px, -5px) rotate(5deg);
+            transform: translate(5px, -5px) rotate(5deg);
+  }
+  45% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  60% {
+    -webkit-transform: translate(0px, -5px) rotate(-5deg);
+            transform: translate(0px, -5px) rotate(-5deg);
+  }
+  75% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  90% {
+    -webkit-transform: translate(5px, -5px) rotate(5deg);
+            transform: translate(5px, -5px) rotate(5deg);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+@keyframes shake {
+  10% {
+    -webkit-transform: translate(0px, -5px) rotate(-5deg);
+            transform: translate(0px, -5px) rotate(-5deg);
+  }
+  15% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  30% {
+    -webkit-transform: translate(5px, -5px) rotate(5deg);
+            transform: translate(5px, -5px) rotate(5deg);
+  }
+  45% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  60% {
+    -webkit-transform: translate(0px, -5px) rotate(-5deg);
+            transform: translate(0px, -5px) rotate(-5deg);
+  }
+  75% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+  90% {
+    -webkit-transform: translate(5px, -5px) rotate(5deg);
+            transform: translate(5px, -5px) rotate(5deg);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+#home_background {
+  background-color: #d4a7de;
+  height: 100vh;
+  width: 100vw;
+}
+
+.home_button_align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header {
+  font-family: "Press Start 2P", cursive;
+}
+
+.line {
+  border-width: 0.2rem;
+  background-color: #202020;
+}
+
+.home_buttons {
+  border: none;
+  padding: 0.6rem 4rem;
+  font-size: 1.4rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: whitesmoke;
+  background-color: #202020;
+}
+
+.home_buttons:hover {
+  color: #d4a7de;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
+}
+
+#home_icon {
+  position: absolute;
+  right: 95%;
+  bottom: 91%;
+  font-size: 3rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#home_icon:hover {
+  font-size: 3.2rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 1;
+}
+
+.body {
+  font-family: "Baloo Tammudu 2", cursive;
+}
+/*# sourceMappingURL=style.css.map */

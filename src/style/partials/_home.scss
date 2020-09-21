@@ -1,0 +1,62 @@
+@keyframes shake {
+    10% { transform: translate(0px, -5px) rotate(-5deg); }
+    15% { transform: translate(0px, 0px) rotate(0deg); }
+    30% { transform: translate(5px, -5px) rotate(5deg); }
+    45% { transform: translate(0px, 0px) rotate(0deg); }
+    60% { transform: translate(0px, -5px) rotate(-5deg); }
+    75% { transform: translate(0px, 0px) rotate(0deg); }
+    90% { transform: translate(5px, -5px) rotate(5deg); }
+    100% { transform: translate(0px, 0px) rotate(0deg); }
+  }
+
+#home_background { 
+    background-color: $home_background_color;
+    height: 100vh; 
+    width:100vw;
+}  
+
+.home_button_align { 
+    display: flex; 
+    justify-content: center;
+}  
+
+.header { 
+    font-family: $header_font;  
+}
+
+.line { 
+    border-width:0.2rem; 
+    background-color: $font_color;
+} 
+
+.home_buttons { 
+    // border:1px solid whitesmoke;  
+    border:none;
+    padding: 0.6rem 4rem; 
+    font-size: 1.4rem; 
+    transition: 0.5s;   
+    color: whitesmoke;
+    background-color: $font_color;
+
+} 
+
+.home_buttons:hover { 
+    color: $home_background_color; 
+    font-size: 1.5rem; 
+    border-radius: 0.5rem; 
+    animation: shake 0.5s;
+}  
+
+#home_icon { 
+    position: absolute;  
+    right:95%;  
+    bottom:91%;
+    font-size: 3rem;  
+    transition: 0.5s
+} 
+
+#home_icon:hover {  
+    font-size: 3.2rem;
+
+}
+
