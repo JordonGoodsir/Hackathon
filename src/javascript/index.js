@@ -4,12 +4,10 @@ let modal = document.getElementById('myModal')
 let span = document.getElementsByClassName('close')[0]
 let catAudio = new Audio('audio/meow.wav')
 
-
 function getRandomNumberForKittenAPI() {
   let suitableNumber = Math.floor(Math.random() * 15) + 1;
   return suitableNumber;
 }
-
 
 function displayKitten() {
   catAudio.currentTime = 0;
@@ -40,7 +38,7 @@ window.onclick = function(event) {
 }
 
 function decodeHtml(html) {
-  var txt = document.createElement("textarea");
+  let txt = document.createElement("textarea");
   txt.innerHTML = html;
   return txt.value;
 }  
@@ -58,11 +56,15 @@ insult = async () => {
       .then(contents => { 
           h5 = document.createElement("H5");
           pText = document.createTextNode(decodeHtml(contents.insult))  
+          let insultGif = document.createElement('img')
           h5.appendChild(pText)  
+
+          insultGif.src = 'https://media1.tenor.com/images/81ed4fdd6bc5d2611b8caaaa3fbe9e9d/tenor.gif?itemid=15863050'
 
           h5.style.padding = "1.2rem"
 
           document.getElementById("insultDiv").appendChild(h5)   
+          document.getElementById("insultDiv").appendChild(insultGif)
           
           audio.play() 
 

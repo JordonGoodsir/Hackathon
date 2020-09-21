@@ -9,7 +9,7 @@ async function fetchTrivaJSON(number, category, difficulty, type) {
 }
 
 function decodeHtml(html) {
-  var txt = document.createElement("textarea");
+  let txt = document.createElement("textarea");
   txt.innerHTML = html;
   return txt.value;
 }
