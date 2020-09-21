@@ -2,6 +2,7 @@ let btn = document.getElementById('cat')
 let modalPic = document.getElementById('modal_pic')
 let modal = document.getElementById('myModal')
 let span = document.getElementsByClassName('close')[0]
+let catAudio = new Audio('audio/meow.wav')
 
 
 function getRandomNumberForKittenAPI() {
@@ -9,13 +10,11 @@ function getRandomNumberForKittenAPI() {
   return suitableNumber;
 }
 
-function playAudio(url) {
-  new Audio(url).play();
-}
 
 function displayKitten() {
-
-  playAudio('audio/meow.wav')
+  catAudio.currentTime = 0;
+  
+  catAudio.play()
 
   modalPic.innerHTML = ''
   const catPic = document.getElementById('cat-pic')  
