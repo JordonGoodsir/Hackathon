@@ -13,11 +13,16 @@
   </head>
 
   <body>
+
     <h1 class="title">Trivia</h1>
+
     <form id="formdata" method="post" onsubmit="return false">
+
       <h4>What kind of trivia would you like today?</h4>
+
       <label for="trivia_amount">Number of questions:</label>
       <input type="number" name="trivia_amount" min="1" max="20" value="10" class="form-control">
+
       <label for="trivia_category">Select Category: </label>
       <select name="trivia_category" class="form-control" value="any">
         <option value="any">Any Category</option>
@@ -46,6 +51,7 @@
         <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
         <option value="32">Entertainment: Cartoon &amp; Animations</option>		
       </select>
+
       <label for="trivia_difficulty">Select Difficulty: </label>
       <select name="trivia_difficulty" class="form-control" value="any">
         <option value="any">Any Difficulty</option>
@@ -53,15 +59,20 @@
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
       </select>
+
       <label for="trivia_type">Select Type: </label>
       <select name="trivia_type" class="form-control" value="any">
         <option value="any">Any Type</option>
         <option value="multiple">Multiple Choice</option>
         <option value="boolean">True / False</option>
       </select>
+
       <button id="button" onclick="return getQuestions()">Get Some Questions!</button>
+
     </form>
+
     <div id="questions"></div>
+    
   </body>
 
 </html>

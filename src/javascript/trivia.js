@@ -23,9 +23,9 @@ function getQuestions() {
   let category = formData.get('trivia_category')
   let difficulty = formData.get('trivia_difficulty')
   let type = formData.get('trivia_type')
-  console.log(questionNumber, category, difficulty, type)
 
   questions.innerHTML = ""
+
   fetchTrivaJSON(questionNumber, category, difficulty, type).then(trivia => {
     trivia.results.map(question =>  {
       let thisQuestion = document.createElement('p')
@@ -48,4 +48,5 @@ function getQuestions() {
   })
 }
 
-// document.getElementById('button').addEventListener('click', getQuestions)
+
+
