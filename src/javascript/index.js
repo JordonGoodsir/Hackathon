@@ -80,8 +80,6 @@ insult = async () => {
           h5.style.padding = "1.2rem"
 
           document.getElementById("insultDiv").appendChild(h5)  
-          
-          audio.play() 
 
           setTimeout(function(){
               document.getElementById("insultDiv").innerHTML = "";
