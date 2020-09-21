@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href= style/style.css> 
+
+    <script src="javascript/index.js" defer></script>
+
     <script src="https://kit.fontawesome.com/c9ff5d0c48.js" crossorigin="anonymous"></script> 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -24,7 +27,7 @@
            
            <div class="row d-flex justify-content-between w-100 my-4">
             <div class="col-sm home_button_align">
-                <button class=home_buttons>Trivia</button>
+                <a href="trivia.html"><button class=home_buttons>Trivia</button></a>
             </div>
             <div class="col-sm home_button_align">
                 <a href="bucket_list.html"><button class=home_buttons>Bucket List</button></a>
@@ -43,22 +46,27 @@
                     <script src=javascript/app.js></script>
                 </div>
                 <div class="col-sm home_button_align">
-                    <button class=home_buttons>Feel Better</button>
+                    <button id="cat" class=home_buttons>Feel Better</button>
                 </div> 
             </div>    
 
             <div id=insultDiv></div>
 
+            <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div id="modal_pic"></div>
+                </div>
+              
+              </div>
             <hr class="w-75 line">
+            
 
         </div>
     </div> 
 
     
-
-    <audio id="myAudio">
-        <source src="resources/ohh.mp3" type="audio/mpeg">
-      </audio>
-    
+    </div>    
 </body>
 </html>
