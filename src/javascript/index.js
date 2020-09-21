@@ -9,7 +9,13 @@ function getRandomNumberForKittenAPI() {
   return suitableNumber;
 }
 
+function playAudio(url) {
+  new Audio(url).play();
+}
+
 function displayKitten() {
+
+  playAudio('audio/meow.wav')
 
   modalPic.innerHTML = ''
   const catPic = document.getElementById('cat-pic')  
