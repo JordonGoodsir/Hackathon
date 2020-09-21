@@ -1,3 +1,9 @@
+function decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+  }
+
 insult = async () => {   
 
 document.getElementById("insultDiv").innerHTML = ""
@@ -8,7 +14,7 @@ fetch(proxyurl + url)
 .then(response => response.json())
 .then(contents => { 
     h5 = document.createElement("H5");
-    pText = document.createTextNode(contents.insult)  
+    pText = document.createTextNode(decodeHtml(contents.insult))  
     h5.appendChild(pText)  
 
     h5.style.padding = "1.2rem"
@@ -17,7 +23,7 @@ fetch(proxyurl + url)
 
     setTimeout(function(){
         document.getElementById("insultDiv").innerHTML = "";
-   },4000);
+   },5000);
 })
 
 .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?")) 
