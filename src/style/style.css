@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;700;800&display=swap");
 @-webkit-keyframes shake {
   10% {
     -webkit-transform: translate(0px, -5px) rotate(-5deg);
@@ -168,6 +168,22 @@
   cursor: pointer;
 }
 
+#top-line-trivia {
+  margin-top: 9%;
+}
+
+.trivia-title {
+  font-family: "Press Start 2P", cursive;
+}
+
+.question {
+  font-weight: 700;
+}
+
+#trivia-button-div {
+  width: 100%;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -178,5 +194,9 @@
 
 .body {
   font-family: "Baloo Tammudu 2", cursive;
+}
+
+i {
+  color: #202020;
 }
 /*# sourceMappingURL=style.css.map */

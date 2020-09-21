@@ -30,12 +30,15 @@ function getQuestions() {
     trivia.results.map(question =>  {
       let thisQuestion = document.createElement('p')
       thisQuestion.textContent = `${decodeHtml(question.question)}`
+      thisQuestion.style.fontWeight = '800'
 
       let ul = document.createElement('ul')
       let correctAnswer = document.createElement('li')
+      ul.style.fontWeight = '400'
 
       correctAnswer.textContent = `Correct Answer: ${decodeHtml(question.correct_answer)}`
       thisQuestion.appendChild(ul).appendChild(correctAnswer)
+      correctAnswer.style.fontWeight = '500'
 
       for (answer in question.incorrect_answers) {
         let li = document.createElement('li')
