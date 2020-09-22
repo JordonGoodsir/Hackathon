@@ -30,7 +30,7 @@ let activities = []
     }
 
    }) 
-}
+ }
    
 document.getElementById("list").innerHTML = ""
 
@@ -55,6 +55,9 @@ document.getElementById("list").innerHTML = ""
    })
 }   
 
-let generate = document.getElementById("generate");
+let generate = document.getElementById("make_list");  
+
+console.log(document.getElementById("make_list"))
+
 
 generate.addEventListener("click", fetchBucketList)
