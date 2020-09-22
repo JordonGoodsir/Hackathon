@@ -68,4 +68,5 @@ function getQuestions() {
 
 const triviaButton = document.getElementById('trivia-button')
 
+// Sets click event
 triviaButton.addEventListener('click', getQuestions)
