@@ -238,7 +238,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 99%;
   height: 95%;
   z-index: 0;
   -webkit-transform: translateZ(0);
@@ -342,23 +342,7 @@
           clip-path: circle(50% at 50% 50%);
 }
 
-#top-line-trivia {
-  margin-top: 9%;
-}
-
-.trivia-title {
-  font-family: "Press Start 2P", cursive;
-}
-
-.question {
-  font-weight: 700;
-}
-
-#trivia-button-div {
-  width: 100%; 
-}
-
-  .bucket_header {
+.bucket_header {
   font-family: "Press Start 2P", cursive;
 }
 
@@ -401,6 +385,22 @@
   text-align: center;
   font-family: "Baloo Tammudu 2", cursive;
   font-size: 1.2rem;
+}
+
+#top-line-trivia {
+  margin-top: 9%;
+}
+
+.trivia-title {
+  font-family: "Press Start 2P", cursive;
+}
+
+.question {
+  font-weight: 700;
+}
+
+#trivia-button-div {
+  width: 100%;
 }
 
 * {
