@@ -1,106 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css"> 
+    <link rel="stylesheet" href="style/style.css" />
 
     <script src="javascript/index.js" defer></script>
 
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" integrity="sha512-aSo1Rf6PPUdCC6zmMOiJxjAYtFnHkpsebCfnzYIxN0FjQdwpI2N/S5cMy1XnDVqTsi5LJ2YvkUcIVHvs1f994A==" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/c9ff5d0c48.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/c9ff5d0c48.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Home</title>
-</head>
+  </head>
 
-<body id="home_background" class="d-flex align-items-center flex-column justify-content-center">    
-   <div id="home_icon">
-    <i class="fas fa-igloo"></i> 
-   </div> 
+  <body id="home_background" class="d-flex align-items-center flex-column justify-content-center">
+    <div id="home_icon">
+      <i class="fas fa-igloo"></i>
+    </div>
 
-    <div class="container-fluid mx-5">  
-        <div class="d-flex justify-content-center align-items-center flex-column "> 
-            <hr class="w-75 line top-line">
-           <h1 class="my-5 header">Entertain Me</h1>  
-           
-           <div class="row d-flex justify-content-between w-100 my-4">
-            <div class="col-sm home_button_align">
-                <a href="trivia.html"><button class=home_buttons>Trivia</button></a>
-            </div>
-            <div class="col-sm home_button_align">
-                <a href="bucket_list.html"><button class=home_buttons>Bucket List</button></a>
-            </div>
-            <div class="col-sm home_button_align">
-                <a href="cocktail.html"><button class="home_buttons">Need a Drink?</button></a>
-            </div>    
-            <div class="col-sm home_button_align">
-                <a href="game.html"><button class="home_buttons">Game?</button></a>
-            </div> 
-            </div>   
+    <div class="container-fluid mx-5">
+      <div class="d-flex justify-content-center align-items-center flex-column">
+        <hr class="w-75 line top-line" />
+        <h1 class="my-5 header">Entertain Me</h1>
 
-            <h2 class="my-5 header">click me?</h2>  
-
-
-            <div class="row d-flex justify-content-between w-100 my-4">
-                <div class="col-sm home_button_align">
-                    <button id="insult" class="home_buttons">Insult Me</button> 
-                </div>
-
-                <div class="col-sm home_button_align">
-                    <button id="boomer" class="home_buttons">Boomer Test</button> 
-                </div>
-
-                <div class="col-sm home_button_align">
-                    <button id="cat" class="home_buttons">Feel Better</button>
-                </div> 
-            </div>    
-
-            <div id="insultDiv"></div>
-
-            <div id="agify"></div>
-
-            <!-- Creates a modal for the cat image to be displayed in -->
-            <div id="myModal" class="modal">
-
-                <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <div id="modal_pic"></div>
-                </div>
-              
-              </div>
-            <hr class="w-75 line">
-            
+        <div class="row d-flex justify-content-between w-100 my-4">
+          <div class="col-sm home_button_align">
+            <a href="trivia.html"
+              ><button class="home_buttons">Trivia</button></a
+            >
+          </div>
+          <div class="col-sm home_button_align">
+            <a href="bucket_list.html"
+              ><button class="home_buttons">Bucket List</button></a
+            >
+          </div>
+          <div class="col-sm home_button_align">
+            <a href="cocktail.html"
+              ><button class="home_buttons">Need a Drink?</button></a
+            >
+          </div>
+          <div class="col-sm home_button_align">
+            <a href="game.html"><button class="home_buttons">Game?</button></a>
+          </div>
         </div>
-    </div> 
 
-    <!-- animation --> 
+        <h2 class="my-5 header">click me?</h2>
+
+        <div class="row d-flex justify-content-between w-100 my-4">
+          <div class="col-sm home_button_align">
+            <button id="insult" class="home_buttons">Insult Me</button>
+          </div>
+
+          <div class="col-sm home_button_align">
+            <button id="boomer" class="home_buttons">Boomer Test</button>
+          </div>
+
+          <div class="col-sm home_button_align">
+            <button id="cat" class="home_buttons">Feel Better</button>
+          </div>
+        </div>
+
+        <div id="insultDiv"></div>
+
+        <div id="agify"></div>
+
+        <!-- Creates a modal for the cat image to be displayed in -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal_pic"></div>
+          </div>
+        </div>
+        <hr class="w-75 line" />
+      </div>
+    </div>
+
+    <!-- animation -->
     <h1 id="message">Move your mouse, see what happens</h1>
-    <h4 id="mouseMove">0</h4>  
+    <h4 id="mouseMove">0</h4>
 
-    <ul id="movingDots"> 
-    <li></li> 
-    <li></li> 
-    <li></li>
-    <li></li> 
-    <li></li> 
-    <li></li> 
-    <li></li>
-    </ul>  
+    <ul id="movingDots">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
-    <hr class="w-75 line">
+    <hr class="w-75 line" />
 
     <footer>
-        <div class="social-icons">
-            <a href="#" aria-label="Twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
-            <a href="#" aria-label="Linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/JordonGoodsir/Hackathon" aria-label="Github" target="_blank"><i class="fab fa-github-square"></i></a>
-        </div> 
-        <p class="copyright">© 2020 Ashley Smith & Jordon Goodsir</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Twitter" target="_blank"
+          ><i class="fab fa-twitter-square"></i
+        ></a>
+        <a href="#" aria-label="Linkedin" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/JordonGoodsir/Hackathon"
+          aria-label="Github"
+          target="_blank"
+          ><i class="fab fa-github-square"></i
+        ></a>
+      </div>
+      <p class="copyright">© 2020 Ashley Smith & Jordon Goodsir</p>
     </footer>
-
-</body>
+  </body>
 </html>

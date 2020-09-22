@@ -1,63 +1,56 @@
-let activityType = { 
-    social: "fa-users", 
-    charity:"fa-hand-holding-heart", 
-    busywork:"fa-briefcase", 
-    recreational:"fa-laugh-beam", 
-    education:"fa-book-open",
-    relaxation:"fa-peace",
-    music:"fa-music", 
-    diy: "fa-hammer", 
-    cooking:"fa-cookie-bite"
-}
+let activityType = {
+  social: "fa-users",
+  charity: "fa-hand-holding-heart",
+  busywork: "fa-briefcase",
+  recreational: "fa-laugh-beam",
+  education: "fa-book-open",
+  relaxation: "fa-peace",
+  music: "fa-music",
+  diy: "fa-hammer",
+  cooking: "fa-cookie-bite",
+};
 
+let fetchBucketList = async () => {
+  document.getElementById("list").innerHTML = "";
 
-let fetchBucketList = async () => {   
+  console.log(document.getElementById("social_distance").checked);
 
-document.getElementById("list").innerHTML = "" 
+  let activities = [];
+  for (let i = 0; i < 10; i++) {
+    await fetch("https://www.boredapi.com/api/activity/")
+      .then((response) => response.json())
+      .then((data) => {
+        if (document.getElementById("social_distance").checked) {
+          data.type != "social" ? activities.push(data) : i--;
+        } else {
+          activities.push(data);
+        }
+      });
+  }
 
-console.log(document.getElementById("social_distance").checked)
+  document.getElementById("list").innerHTML = "";
 
-let activities = [] 
-    for(let i=0; i < 10; i++){ 
-    
-    await fetch("https://www.boredapi.com/api/activity/") 
-    .then(response => response.json())  
-    .then(data => { 
-    if (document.getElementById("social_distance").checked) {
-      data.type != "social" ? activities.push(data) : i--
-    } else { 
-       activities.push(data) 
-    }
+  activities.forEach((v) => {
+    let li = document.createElement("LI");
 
-   }) 
- }
-   
-document.getElementById("list").innerHTML = ""
+    let liText = document.createTextNode(v.activity);
 
-   activities.forEach((v) => {  
+    let i = document.createElement("I");
 
-    let li = document.createElement("LI")  
+    i.classList.add("fas");
 
-    let liText = document.createTextNode(v.activity) 
+    i.classList.add(`${activityType[v.type]}`);
 
-    let i = document.createElement("I")  
+    li.appendChild(i);
 
-    i.classList.add("fas")   
+    li.appendChild(liText);
 
-    i.classList.add(`${activityType[v.type]}`)  
+    document.getElementById("list").appendChild(li);
+  });
+};
 
-    li.appendChild(i)
-    
-    li.appendChild(liText)
+let generate = document.getElementById("make_list");
 
-    document.getElementById("list").appendChild(li)  
+console.log(document.getElementById("make_list"));
 
-   })
-}   
-
-let generate = document.getElementById("make_list");  
-
-console.log(document.getElementById("make_list"))
-
-
-generate.addEventListener("click", fetchBucketList)
+generate.addEventListener("click", fetchBucketList);
