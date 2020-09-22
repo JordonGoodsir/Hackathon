@@ -59,37 +59,161 @@
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: $home_background_color;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    height: 400px;
+    width: 240px;
+  }
+  
+  .close {
+    color: $font_color;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  } 
+
+  // dots animation  
+
+  @keyframes float { 
+    0% { 
+    transform: translateY(0px); 
+    opacity: 0.5
+    }  
+    10% { 
+        opacity: 0.7;
+    } 
+    20%{ 
+        opacity: 0.5;  
+    } 
+    30% { 
+        opacity: 0.7;
+    } 
+    40%{ 
+        opacity: 0.5; 
+    } 
+    50% { 
+        opacity: 0.7;
+    } 
+    60%{ 
+        opacity: 0.5; 
+    }
+    80% { 
+        transform: translateY(-100vh); 
+        opacity: 0
+    }
+} 
+
+#mouseMove { 
+  z-index: 2;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: $home_background_color;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  height: 400px;
-  width: 240px;
-}
+  #movingDots { 
+    position: absolute; 
+    top:0;
+    left:0; 
+    width:100%; 
+    height:95%; 
+    z-index: 0; 
+    transform: translateZ(0);
+} 
 
-.close {
-  color: $font_color;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
+#movingDots li { 
+    position: absolute; 
+    list-style: none; 
+    display:block; 
+    background-color: whitesmoke; 
+    opacity: 0; 
+    bottom: 1%;         
+    animation: float infinite; 
+    transition-timing-function: linear;  
+  } 
+ 
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
+#movingDots li:nth-child(1) {  
+    width: 3em; 
+    height: 3em;
+    left:12.5%;  
+    clip-path: circle(50% at 50% 50%);
+    animation-delay: 0s; 
+    animation-duration: 21s; 
+}  
+
+
+#movingDots li:nth-child(2) { 
+    width: 2em; 
+    height: 2em; 
+    left:25%; 
+    clip-path: circle(50% at 50% 50%);
+    animation-delay: 3s; 
+    animation-duration: 22s;  
+} 
+
+#movingDots li:nth-child(3) { 
+    width: 1em; 
+    height: 1em;
+    left:37.5%; 
+    clip-path: circle(50% at 50% 50%);
+    animation-delay: 0s; 
+    animation-duration: 20s; 
+} 
+
+#movingDots li:nth-child(4) {   
+    width: 2em; 
+    height: 2em; 
+    left:50%; 
+    animation-delay: 3s; 
+    animation-duration: 26s; 
+    clip-path: circle(50% at 50% 50%); 
+
+}  
+
+#movingDots li:nth-child(5) { 
+    width: 1.9em; 
+    height: 1.9em; 
+    left:62.5%; 
+    animation-delay: 1s; 
+    animation-duration: 20s; 
+    clip-path: circle(50% at 50% 50%); 
+
+}  
+
+#movingDots li:nth-child(6) { 
+    width: 1.8em; 
+    height: 1.8em; 
+    left:75%; 
+    animation-delay: 4s; 
+    animation-duration: 19s; 
+    clip-path: circle(50% at 50% 50%); 
+}  
+
+#movingDots li:nth-child(7) { 
+    width: 1em; 
+    height: 1em; 
+    left:87.5%; 
+    animation-delay: 1.4s; 
+    animation-duration: 18s; 
+    clip-path: circle(50% at 50% 50%); 
+
+} 
