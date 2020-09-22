@@ -1,4 +1,14 @@
-
+let activityType = { 
+    social: "fa-users", 
+    charity:"fa-hand-holding-heart", 
+    busywork:"fa-briefcase", 
+    recreational:"fa-laugh-beam", 
+    education:"fa-book-open",
+    relaxation:"fa-peace",
+    music:"fa-music", 
+    diy: "fa-hammer", 
+    cooking:"fa-cookie-bite"
+}
 
 
 let fetchBucketList = async () => {   
