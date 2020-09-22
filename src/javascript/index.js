@@ -154,8 +154,37 @@ moveCounter = async () => {
     } 
 } 
 
-
-
-
-
 document.getElementById("home_background").addEventListener("mousemove", moveCounter) 
+
+// Gets data for agify
+async function fetchAgifyJSON(name) {
+  const response = await fetch(`https://api.agify.io?name=${name}`);
+  const agifyData = await response.json();
+  return agifyData;
+}
+
+// Gets name prompt and returns if you're a boomer or not
+function boomerTest() {
+  let name = prompt('Please enter your name')
+  name = name.trim()
+
+  fetchAgifyJSON(name).then(response => {
+    console.log(response.age)
+    let agifyDiv = document.getElementById('agify')
+    let age = document.createElement('p')
+    if (response.age >= 40) {
+      age.textContent = 'Sorry you are a boomer'
+      age.classList.add('card', 'text-white', 'bg-danger', 'p-2')
+    } else {
+      age.textContent = 'Congrats you are not a boomer'
+      age.classList.add('card', 'text-white', 'bg-success', 'p-2')
+    } 
+    agifyDiv.appendChild(age)
+    setTimeout(function(){
+      agify.innerHTML = "";
+    },5000)
+  })
+}
+
+const boomerButton = document.getElementById('boomer')
+boomerButton.addEventListener('click', boomerTest)
