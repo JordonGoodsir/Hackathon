@@ -129,7 +129,7 @@
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 2;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -146,8 +146,8 @@
 /* Modal Content/Box */
 .modal-content {
   background-color: #d4a7de;
-  margin: 15% auto;
-  /* 15% from the top and centered */
+  margin: 8% auto;
+  /* 8% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   height: 400px;
@@ -231,7 +231,7 @@
 }
 
 #mouseMove {
-  z-index: 2;
+  z-index: 1;
 }
 
 #movingDots {
@@ -417,5 +417,9 @@
 
 i {
   color: #202020;
+}
+
+.card {
+  background: #dcf6d6;
 }
 /*# sourceMappingURL=style.css.map */
