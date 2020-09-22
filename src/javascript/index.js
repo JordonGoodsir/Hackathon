@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-
 // Kitten button
-=======
+
 // Sets up for modal use when cat button is clicked
->>>>>>> a486d4cbc3aa082b12a6cbb9d106fa2d536be767
 let btn = document.getElementById('cat')
 let modalPic = document.getElementById('modal_pic')
 let modal = document.getElementById('myModal')
@@ -155,8 +152,6 @@ moveCounter = async () => {
        break;
 
     } 
-
-
 } 
 
 
