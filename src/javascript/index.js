@@ -132,22 +132,22 @@ moveCounter = async () => {
       break;
 
         case 250:  
-        await dotsPhase1(10) 
+        await dotsPhase1(13) 
          document.getElementById("message").innerHTML = "ITS CREATING POWER"   
         break; 
 
         case 600:  
-        await dotsPhase1(10) 
+        await dotsPhase1(14) 
         document.getElementById("message").innerHTML = "MORE POWER"
        break;  
 
        case 900:  
-        await dotsPhase1(10) 
+        await dotsPhase1(15) 
         document.getElementById("message").innerHTML = "WAIT STOP"
        break;  
 
        case 1200:  
-        await dotsPhase1(25) 
+        await dotsPhase1(27) 
         document.getElementById("message").innerHTML = "TOO MUCH POWER"
        break;
 
