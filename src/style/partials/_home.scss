@@ -1,64 +1,65 @@
 @keyframes shake {
-    10% { transform: translate(0px, -5px) rotate(-5deg); }
-    15% { transform: translate(0px, 0px) rotate(0deg); }
-    30% { transform: translate(5px, -5px) rotate(5deg); }
-    45% { transform: translate(0px, 0px) rotate(0deg); }
-    60% { transform: translate(0px, -5px) rotate(-5deg); }
-    75% { transform: translate(0px, 0px) rotate(0deg); }
-    90% { transform: translate(5px, -5px) rotate(5deg); }
-    100% { transform: translate(0px, 0px) rotate(0deg); }
-  }
+  10% { transform: translate(0px, -5px) rotate(-5deg); }
+  15% { transform: translate(0px, 0px) rotate(0deg); }
+  30% { transform: translate(5px, -5px) rotate(5deg); }
+  45% { transform: translate(0px, 0px) rotate(0deg); }
+  60% { transform: translate(0px, -5px) rotate(-5deg); }
+  75% { transform: translate(0px, 0px) rotate(0deg); }
+  90% { transform: translate(5px, -5px) rotate(5deg); }
+  100% { transform: translate(0px, 0px) rotate(0deg); }
+}
 
 #home_background { 
-    background-color: $home_background_color;
-    height: 100vh; 
-    width:100vw;
+  background-color: $home_background_color;
+  height: 100vh; 
+  width:100vw;
 }  
 
 .home_button_align { 
-    display: flex; 
-    justify-content: center;
+  display: flex; 
+  justify-content: center;
 }  
 
 .header { 
-    font-family: $header_font;  
+  font-family: $header_font;  
 }
 
 .line { 
-    border-width:0.2rem; 
-    background-color: $font_color;
+  border-width:0.2rem; 
+  background-color: $font_color;
 } 
 
 .home_buttons { 
-    border:none;
-    padding: 0.6rem 4rem; 
-    font-size: 1.4rem; 
-    transition: 0.5s;   
-    color: whitesmoke;
-    background-color: $font_color;
+  border:none;
+  padding: 0.6rem 4rem; 
+  font-size: 1.4rem; 
+  transition: 0.5s;   
+  color: whitesmoke;
+  background-color: $font_color;
 
 } 
 
 .home_buttons:hover { 
-    color: $home_background_color; 
-    font-size: 1.5rem; 
-    border-radius: 0.5rem; 
-    animation: shake 0.5s;
+  color: $home_background_color; 
+  font-size: 1.5rem; 
+  border-radius: 0.5rem; 
+  animation: shake 0.5s;
 }  
 
 #home_icon { 
-    position: absolute;  
-    right:95%;  
-    bottom:91%;
-    font-size: 3rem;  
-    transition: 0.5s
+  position: absolute;  
+  right:95%;  
+  bottom:91%;
+  font-size: 3rem;  
+  transition: 0.5s
 } 
 
 #home_icon:hover {  
-    font-size: 3.2rem;
+  font-size: 3.2rem;
 }
 
 .modal {
+<<<<<<< HEAD
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -217,3 +218,39 @@
     clip-path: circle(50% at 50% 50%); 
 
 } 
+=======
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: $home_background_color;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  height: 400px;
+  width: 240px;
+}
+
+.close {
+  color: $font_color;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+>>>>>>> a486d4cbc3aa082b12a6cbb9d106fa2d536be767

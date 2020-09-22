@@ -6,20 +6,29 @@
     <title>Trivia</title>
     <link rel="stylesheet" href= style/style.css> 
     <script src="javascript/trivia.js" defer></script>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c9ff5d0c48.js" crossorigin="anonymous"></script> 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </head>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ </head>
 
-  <body>
+<body id=home_background>    
+  <div class="d-flex align-items-center flex-column justify-content-center">
+    <div id="home_icon">
+      <a href="index.html"><i class="fas fa-igloo"></i></a>
+    </div> 
 
-    <h1 class="title">Trivia</h1>
+    <hr id="top-line-trivia" class="w-75 line">
+    <h1 class="trivia-title">Trivia</h1>
 
+    <br>
+
+    <!-- Sets onsubmit on form to false so page is not reloaded -->
     <form id="formdata" method="post" onsubmit="return false">
 
-      <h4>What kind of trivia would you like today?</h4>
+      <p class="trivia-title">What kind of trivia would you like today?</p>
 
       <label for="trivia_amount">Number of questions:</label>
       <input type="number" name="trivia_amount" min="1" max="20" value="10" class="form-control">
@@ -68,12 +77,19 @@
         <option value="boolean">True / False</option>
       </select>
 
-      <button id="button" onclick="return getQuestions()">Get Some Questions!</button>
+      <br>
 
+      <div id="trivia-button-div" class=" d-flex justify-content-center">
+        <button id="trivia-button" class="home_buttons">Get Some Questions!</button>
+      </div>
     </form>
 
-    <div id="questions"></div>
-    
-  </body>
+    <br>
 
+    <div id="questions"></div>
+
+    <hr class="w-75 line">
+
+  </div>
+</body>
 </html>
