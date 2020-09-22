@@ -61,7 +61,7 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2; /* Sit on top */
     left: 0;
     top: 0;
     width: 100vw; /* Full width */
@@ -73,7 +73,7 @@
   /* Modal Content/Box */
   .modal-content {
     background-color: $home_background_color;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 8% auto; /* 8% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     height: 400px;
@@ -126,7 +126,7 @@
 } 
 
 #mouseMove { 
-  z-index: 2;
+  z-index: 1;
 }
 
   #movingDots { 
