@@ -395,12 +395,43 @@
   font-family: "Press Start 2P", cursive;
 }
 
-.question {
-  font-weight: 700;
-}
-
 #trivia-button-div {
   width: 100%;
+}
+
+#game_background {
+  background-color: #F69D50;
+  height: 100vh;
+  width: 100vw;
+}
+
+#game_box {
+  width: 10rem;
+  height: 10rem;
+  background-color: #202020;
+  z-index: 123;
+  position: relative;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.game_buttons {
+  border: none;
+  padding: 0.6rem 4rem;
+  font-size: 1.4rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: whitesmoke;
+  background-color: #202020;
+  margin: 2rem;
+}
+
+.game_buttons:hover {
+  color: #F69D50;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
 }
 
 * {
