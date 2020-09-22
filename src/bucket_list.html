@@ -12,10 +12,19 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
-<body> 
-<button id="generate">Generate List</button> 
-<div id=list> 
-</div>
+<body id=bucket_background class="d-flex align-items-center flex-column justify-content-center">  
+
+<h1 class=bucket_header>Bucket List G3n3r@tor</h1>
+
+<button id="generate" class="bucket_buttons my-5">Generate List</button>  
+
+<form class="distanceForm"> 
+<input type="checkbox" id="social_distance" name="social_distance">
+<label for="checkbox">Social Distancing?</label> 
+<p>Hint: Ticking this box will exclude social activities</p>
+</form>
+
+<div id=list></div>
 
 <script src=javascript/bucket_list.js></script>
 </body>
