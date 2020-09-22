@@ -1,0 +1,43 @@
+.bucket_header { 
+    font-family: $header_font ;
+} 
+
+#bucket_background { 
+    background-color: $bucket_color;
+    height: 100vh; 
+    width:100vw;
+}   
+
+.bucket_buttons { 
+    border:none;
+    padding: 0.6rem 4rem; 
+    font-size: 1.4rem; 
+    transition: 0.5s;   
+    color: whitesmoke;
+    background-color: $font_color;
+
+} 
+
+.bucket_buttons:hover { 
+    color: $bucket_color; 
+    font-size: 1.5rem; 
+    border-radius: 0.5rem; 
+    animation: shake 0.5s;
+}  
+
+#list li { 
+    list-style-type: none; 
+    font-family: $body_font; 
+    font-size: 1.5rem; 
+    padding: 0.5rem
+} 
+
+#list i { 
+    padding-right:0.4rem
+} 
+
+.distanceForm { 
+    text-align: center; 
+    font-family: $body_font; 
+    font-size: 1.2rem;
+}

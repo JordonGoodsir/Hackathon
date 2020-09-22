@@ -124,6 +124,51 @@
   font-size: 3.2rem;
 }
 
+.bucket_header {
+  font-family: "Press Start 2P", cursive;
+}
+
+#bucket_background {
+  background-color: #68c6fc;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bucket_buttons {
+  border: none;
+  padding: 0.6rem 4rem;
+  font-size: 1.4rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: whitesmoke;
+  background-color: #202020;
+}
+
+.bucket_buttons:hover {
+  color: #68c6fc;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
+}
+
+#list li {
+  list-style-type: none;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+#list i {
+  padding-right: 0.4rem;
+}
+
+.distanceForm {
+  text-align: center;
+  font-family: "Baloo Tammudu 2", cursive;
+  font-size: 1.2rem;
+}
+
 * {
   padding: 0;
   margin: 0;
