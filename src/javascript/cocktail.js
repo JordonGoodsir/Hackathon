@@ -20,6 +20,8 @@ function getCocktail() {
     let drinkName = document.createElement('h5')
     let drinkImage = document.createElement('img')
 
+    cocktailDiv.classList.add('card')
+
     cocktailDiv.innerHTML = ''
 
     drinkName.textContent = `${thisDrink.strDrink}`
