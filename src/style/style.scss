@@ -4,6 +4,7 @@
 @import "partials/home";  
 @import "partials/bucket_list";   
 @import "partials/trivia";
+@import "partials/footer";
 
 * { 
     padding: 0; 
@@ -23,4 +24,8 @@ i {
 .card {
    background: #404040;
    color: whitesmoke;
+}
+
+.top-line {
+    margin-top: 9% !important;
 }
