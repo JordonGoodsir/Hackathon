@@ -21,14 +21,14 @@
     </div> 
 
     <hr id="top-line-trivia" class="w-75 line">
-    <h1 class="title">Trivia</h1>
+    <h1 class="trivia-title">Trivia</h1>
 
     <br>
 
     <!-- Sets onsubmit on form to false so page is not reloaded -->
     <form id="formdata" method="post" onsubmit="return false">
 
-      <p class="trivia">What kind of trivia would you like today?</p>
+      <p class="trivia-title">What kind of trivia would you like today?</p>
 
       <label for="trivia_amount">Number of questions:</label>
       <input type="number" name="trivia_amount" min="1" max="20" value="10" class="form-control">
@@ -79,14 +79,14 @@
 
       <br>
 
-      <div id="trivia-button-div" class=" d-flex justify-content-center">
+      <div id="trivia-button-div" class="d-flex justify-content-center">
         <button id="trivia-button" class="home_buttons">Get Some Questions!</button>
       </div>
     </form>
 
     <br>
 
-    <div id="questions"></div>
+    <div id="questions" class="d-flex flex-column w-50 "></div>
 
     <hr class="w-75 line">
 
