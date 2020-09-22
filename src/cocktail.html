@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cocktails</title>
-  <script src="javascript/cocktail.js" defer></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+    <link rel="stylesheet" href= style/style.css> 
+    <script src="javascript/trivia.js" defer></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c9ff5d0c48.js" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ </head>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href= style/style.css> 
-  <script src="https://kit.fontawesome.com/c9ff5d0c48.js" crossorigin="anonymous"></script> 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-
-</head>
 <body id=home_background>    
   <div class="d-flex align-items-center flex-column justify-content-center">
     <div id="home_icon">
@@ -23,15 +21,75 @@
     </div> 
 
     <hr id="top-line-trivia" class="w-75 line">
-    <h1 class="title">Cocktail Idea</h1>
+    <h1 class="title">Trivia</h1>
+
     <br>
-    <button id="cocktail-button" class="home_buttons">You look like you could use a drink</button>
+
+    <!-- Sets onsubmit on form to false so page is not reloaded -->
+    <form id="formdata" method="post" onsubmit="return false">
+
+      <p class="trivia">What kind of trivia would you like today?</p>
+
+      <label for="trivia_amount">Number of questions:</label>
+      <input type="number" name="trivia_amount" min="1" max="20" value="10" class="form-control">
+
+      <label for="trivia_category">Select Category: </label>
+      <select name="trivia_category" class="form-control" value="any">
+        <option value="any">Any Category</option>
+        <option value="9">General Knowledge</option>
+        <option value="10">Entertainment: Books</option>
+        <option value="11">Entertainment: Film</option>
+        <option value="12">Entertainment: Music</option>
+        <option value="13">Entertainment: Musicals &amp; Theatres</option>
+        <option value="14">Entertainment: Television</option>
+        <option value="15">Entertainment: Video Games</option>
+        <option value="16">Entertainment: Board Games</option>
+        <option value="17">Science &amp; Nature</option>
+        <option value="18">Science: Computers</option>
+        <option value="19">Science: Mathematics</option>
+        <option value="20">Mythology</option>
+        <option value="21">Sports</option>
+        <option value="22">Geography</option>
+        <option value="23">History</option>
+        <option value="24">Politics</option>
+        <option value="25">Art</option>
+        <option value="26">Celebrities</option>
+        <option value="27">Animals</option>
+        <option value="28">Vehicles</option>
+        <option value="29">Entertainment: Comics</option>
+        <option value="30">Science: Gadgets</option>
+        <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+        <option value="32">Entertainment: Cartoon &amp; Animations</option>		
+      </select>
+
+      <label for="trivia_difficulty">Select Difficulty: </label>
+      <select name="trivia_difficulty" class="form-control" value="any">
+        <option value="any">Any Difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <label for="trivia_type">Select Type: </label>
+      <select name="trivia_type" class="form-control" value="any">
+        <option value="any">Any Type</option>
+        <option value="multiple">Multiple Choice</option>
+        <option value="boolean">True / False</option>
+      </select>
+
+      <br>
+
+      <div id="trivia-button-div" class=" d-flex justify-content-center">
+        <button id="trivia-button" class="home_buttons">Get Some Questions!</button>
+      </div>
+    </form>
+
     <br>
-    <br>
-    <div id="cocktail" class="d-flex flex-column align-items-center w-50 text-center"></div>
+
+    <div id="questions"></div>
 
     <hr class="w-75 line">
-  
+
   </div>
 </body>
 </html>
