@@ -1,6 +1,4 @@
-"https://www.boredapi.com/api/activity/" 
-
-activityType = { 
+let activityType = { 
     social: "fa-users", 
     charity:"fa-hand-holding-heart", 
     busywork:"fa-briefcase", 
