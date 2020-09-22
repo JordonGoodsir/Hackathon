@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cocktails</title>
-  <script src="javascript/cocktail.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktails</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href= style/style.css> 
-  <script src="https://kit.fontawesome.com/c9ff5d0c48.js" crossorigin="anonymous"></script> 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="javascript/cocktail.js" defer></script>
 
-</head>
-<body id=home_background>    
-  <div class="d-flex align-items-center flex-column justify-content-center">
-    <div id="home_icon">
-      <a href="index.html"><i class="fas fa-igloo"></i></a>
-    </div> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href= style/style.css>
+    <script src="https://kit.fontawesome.com/c9ff5d0c48.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+  </head>
+  <body id="home_background">
+    <div class="d-flex align-items-center flex-column justify-content-center">
+      <div id="home_icon">
+        <a href="index.html"><i class="fas fa-igloo"></i></a>
+      </div>
 
-    <hr class="w-75 line top-line">
-    <h1 class="title">Cocktail Idea</h1>
-    <br>
+      <hr class="w-75 line top-line" />
+      <h1 class="title">Cocktail Idea</h1>
+      <br />
 
-    <button id="cocktail-button" class="home_buttons">You look like you could use a drink</button>
+      <button id="cocktail-button" class="home_buttons">
+        You look like you could use a drink
+      </button>
 
-    <br>
-    <br>
-    
-    <div id="cocktail" class="d-flex flex-column align-items-center w-50 text-center"></div>
+      <br />
+      <br />
 
-    <hr class="w-75 line">
-  
-  </div>
-  
-  <footer>
-    <div class="social-icons">
-        <a href="#" aria-label="Twitter" target="_blank"><i class="fab fa-twitter-square"></i></a>
-        <a href="#" aria-label="Linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/JordonGoodsir/Hackathon" aria-label="Github" target="_blank"><i class="fab fa-github-square"></i></a>
-    </div> 
-    <p class="copyright">© 2020 Ashley Smith & Jordon Goodsir</p>
-  </footer>
-</body>
+      <div
+        id="cocktail"
+        class="d-flex flex-column align-items-center w-50 text-center"
+      ></div>
+
+      <hr class="w-75 line" />
+    </div>
+
+    <footer>
+      <div class="social-icons">
+        <a href="#" aria-label="Twitter" target="_blank"
+          ><i class="fab fa-twitter-square"></i
+        ></a>
+        <a href="#" aria-label="Linkedin" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/JordonGoodsir/Hackathon"
+          aria-label="Github"
+          target="_blank"
+          ><i class="fab fa-github-square"></i
+        ></a>
+      </div>
+      <p class="copyright">© 2020 Ashley Smith & Jordon Goodsir</p>
+    </footer>
+  </body>
 </html>
