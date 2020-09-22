@@ -1,3 +1,5 @@
+
+// Kitten button
 let btn = document.getElementById('cat')
 let modalPic = document.getElementById('modal_pic')
 let modal = document.getElementById('myModal')
@@ -37,7 +39,9 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+} 
+
+// insult button
 
 function decodeHtml(html) {
   var txt = document.createElement("textarea");
@@ -86,3 +90,66 @@ insult = async () => {
 }  
 
 document.getElementById("insult").addEventListener("click",insult) 
+
+// background animation  
+
+let movement = 0 
+
+
+let dots = document.getElementById("movingDots")  
+
+dotsPhase1 = (amount) => {    
+        for(i = 0; i <= amount; i++) { 
+         
+            let size = Math.floor(Math.random() * 3) + 1  
+         
+            let newDot = document.createElement("LI")  
+            newDot.style.width = `${size}rem`;  
+            newDot.style.height = `${size}rem`; 
+            newDot.style.left = `${Math.floor(Math.random() * 100)}%`; 
+            newDot.style.clipPath = "circle(50% at 50% 50%)";
+            newDot.style.animationDuration = `${Math.floor(Math.random() * 10) + 10}s`; 
+            newDot.style.animationDelay = `${Math.floor(Math.random() * 2) + 0.2}s`;  
+            dots.appendChild(newDot)  
+           }   
+}
+
+moveCounter = async () => {  
+    document.getElementById("mouseMove").innerHTML = movement+=1;   
+
+    switch (movement) {  
+
+      case 100:  
+        document.getElementById("message").innerHTML = "What happens when that number is 250?"   
+      break;
+
+        case 250:  
+        await dotsPhase1(10) 
+         document.getElementById("message").innerHTML = "ITS CREATING POWER"   
+        break; 
+
+        case 600:  
+        await dotsPhase1(10) 
+        document.getElementById("message").innerHTML = "MORE POWER"
+       break;  
+
+       case 900:  
+        await dotsPhase1(10) 
+        document.getElementById("message").innerHTML = "WAIT STOP"
+       break;  
+
+       case 1200:  
+        await dotsPhase1(25) 
+        document.getElementById("message").innerHTML = "TOO MUCH POWER"
+       break;
+
+    } 
+
+
+} 
+
+
+
+
+
+document.getElementById("home_background").addEventListener("mousemove", moveCounter) 
