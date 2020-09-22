@@ -168,7 +168,6 @@
   cursor: pointer;
 }
 
-<<<<<<< HEAD
 @-webkit-keyframes float {
   0% {
     -webkit-transform: translateY(0px);
@@ -341,7 +340,8 @@
           animation-duration: 18s;
   -webkit-clip-path: circle(50% at 50% 50%);
           clip-path: circle(50% at 50% 50%);
-=======
+}
+
 #top-line-trivia {
   margin-top: 9%;
 }
@@ -356,7 +356,6 @@
 
 #trivia-button-div {
   width: 100%;
->>>>>>> a486d4cbc3aa082b12a6cbb9d106fa2d536be767
 }
 
 * {
