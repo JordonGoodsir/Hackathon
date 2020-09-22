@@ -1,0 +1,16 @@
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+
+.social-icons {
+  font-size: 3rem;
+  padding: 1%;
+  i { 
+    &:hover {
+      // transform: scale(1.5);
+      animation: shake 0.5s;
+    }
+  }
+}

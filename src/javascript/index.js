@@ -167,9 +167,7 @@ async function fetchAgifyJSON(name) {
 function boomerTest() {
   let name = prompt('Please enter your name')
   name = name.trim()
-
   fetchAgifyJSON(name).then(response => {
-    console.log(response.age)
     let agifyDiv = document.getElementById('agify')
     let age = document.createElement('p')
     if (response.age >= 40) {
