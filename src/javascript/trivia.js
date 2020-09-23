@@ -1,3 +1,6 @@
+const questions = document.getElementById("questions");
+const triviaButton = document.getElementById("trivia-button");
+
 // Gets the details from the trivia api
 async function fetchTrivaJSON(number, category, difficulty, type) {
   // This is the format the trivia api is in when all categories are selected
@@ -26,7 +29,28 @@ function decodeHtml(html) {
   return txt.value;
 }
 
-const questions = document.getElementById("questions");
+function showAnswer(answerDiv) {
+  answerDiv.addEventListener("click", function () {
+    if (answerDiv.classList.contains("text-danger")) {
+      answerDiv.classList.add("text-light");
+      answerDiv.classList.remove("text-danger");
+    } else {
+      answerDiv.classList.remove("text-light");
+      answerDiv.classList.add("text-danger");
+    }
+  });
+}
+
+function shuffleArray(array) {
+  var j, x, i;
+  for (i = array.length - 1; i > 0; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    x = array[i];
+    array[i] = array[j];
+    array[j] = x;
+  }
+  return array;
+}
 
 // Generates the list of questions and displays them to the screen
 function getQuestions() {
@@ -44,36 +68,39 @@ function getQuestions() {
   // Uses the api to generate the question list
   fetchTrivaJSON(questionNumber, category, difficulty, type).then((trivia) => {
     trivia.results.map((question) => {
-      // Creates element for questions to be added to
+      // Creates element for questions to be added to and adds styling
       let thisQuestion = document.createElement("p");
       thisQuestion.textContent = `${decodeHtml(question.question)}`;
-      thisQuestion.style.fontWeight = "800";
+      thisQuestion.style.fontWeight = "700";
+      thisQuestion.classList.add("card", "bg-dark", "text-light", "p-1");
 
-      // Creates list for display purposes
-      let ul = document.createElement("ul");
-      let correctAnswer = document.createElement("li");
-      ul.style.fontWeight = "400";
+      // Generates an array for the answers to be stored in and shuffles the array
+      let answers = question.incorrect_answers;
+      answers.push(question.correct_answer);
+      answers = shuffleArray(answers);
 
-      // Shows the correct answer
-      correctAnswer.textContent = `Correct Answer: ${decodeHtml(
-        question.correct_answer
-      )}`;
-      thisQuestion.appendChild(ul).appendChild(correctAnswer);
+      // Iterates through each answer and displays it below the question
+      answers.map((answer) => {
+        let eachAnswer = document.createElement("p");
+        eachAnswer.textContent = decodeHtml(decodeHtml(answer));
+        eachAnswer.style.fontWeight = "400";
+        thisQuestion.appendChild(eachAnswer);
+      });
+
+      // Creates the correct answer element and adds styling so it isn't readable
+      let correctAnswer = document.createElement("p");
+      correctAnswer.textContent = `Correct Answer: ${decodeHtml(question.correct_answer)}`;
+      correctAnswer.classList.add("bg-danger", "text-danger");
+
+      thisQuestion.appendChild(correctAnswer);
       correctAnswer.style.fontWeight = "500";
 
-      // Loops through all incorret options and displays them
-      for (answer in question.incorrect_answers) {
-        let li = document.createElement("li");
-        li.textContent = decodeHtml(question.incorrect_answers[answer]);
-        ul.appendChild(li);
-      }
-
       questions.appendChild(thisQuestion);
+
+      // Calls function to hide answer
+      showAnswer(correctAnswer);
     });
   });
 }
-
-const triviaButton = document.getElementById("trivia-button");
-
 // Sets click event
 triviaButton.addEventListener("click", getQuestions);
